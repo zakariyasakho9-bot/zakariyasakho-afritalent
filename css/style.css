@@ -1,206 +1,199 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;700&display=swap');
 
 /* Variables CSS */
-:root{
-    --primary:#0d6efd;
-    --secondary:#6c757d;
-    --success:#198754;
-    --warning:#ffc107;
-    --light:#f8f9fa;
-    --dark:#212529;
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --white-color: #ffffff;
 
-    --title-font:'Poppins',sans-serif;
-    --text-font:'Roboto',sans-serif;
+    --font-title: 'Poppins', sans-serif;
+    --font-text: 'Roboto', sans-serif;
 
-    --space-sm:10px;
-    --space-md:20px;
-    --space-lg:40px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+
+    --border-radius: 12px;
 }
 
 /* Reset CSS */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Style général */
-body{
-    font-family:var(--text-font);
-    background:var(--light);
-    color:var(--dark);
-    line-height:1.6;
+/* Style de base */
+body {
+    font-family: var(--font-text);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 /* Titres */
-h1,h2,h3,h4,h5,h6{
-    font-family:var(--title-font);
-    font-weight:700;
-    margin-bottom:15px;
-}
-
-/* Paragraphes */
-p{
-    margin-bottom:15px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+    font-weight: 600;
 }
 
 /* Liens */
-a{
-    text-decoration:none;
-    color:var(--primary);
-}
-
-a:hover{
-    color:var(--warning);
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Images */
-img{
-    max-width:100%;
-    display:block;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-/* Container */
-.container{
-    padding-top:40px;
-    padding-bottom:40px;
+/* Layout général */
+.container {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
 }
 
-/* Navbar */
-.navbar{
-    background:#fff;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
-    padding:15px 0;
+/* Navbar stylisée */
+.navbar {
+    background-color: var(--white-color);
+    padding: var(--spacing-md);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand{
-    font-family:var(--title-font);
-    font-size:28px;
-    font-weight:bold;
-    color:var(--primary);
+.navbar-brand {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-.navbar-nav{
-    margin-left:auto;
+.navbar-nav {
+    margin-left: auto;
 }
 
-.navbar-nav .nav-link{
-    color:var(--dark);
-    margin-left:20px;
-    font-weight:500;
-    transition:.3s;
+.navbar-nav .nav-link {
+    margin-left: var(--spacing-md);
+    font-weight: 500;
+    color: var(--text-color);
+    transition: 0.3s;
 }
 
-.navbar-nav .nav-link:hover{
-    color:var(--primary);
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
 }
 
 /* Boutons */
-.btn-primary{
-    background:var(--primary);
-    border:none;
-    padding:10px 20px;
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
 }
 
-.btn-primary:hover{
-    background:var(--success);
+.btn-primary:hover {
+    background-color: #0b5ed7;
 }
 
-/* ===== HERO ===== */
-.hero{
-    padding:80px 0;
-    background:#f8f9fa;
+/* Cartes */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-.hero h1{
-    font-size:3rem;
-    font-weight:700;
-    color:var(--primary);
+.card:hover {
+    transform: translateY(-5px);
+}
+/*=========comite 4 */
+/* SECTION HERO */
+.hero {
+    padding: 80px 0;
 }
 
-.hero p{
-    font-size:1.2rem;
-    margin:20px 0;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-.hero img{
-    border-radius:15px;
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 
-/* ===== BENTO GRID ===== */
-
-.bento-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+/* BENTO GRID */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.bento-item{
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.bento-item:first-child{
-    grid-column:span 2;
+.box:first-child {
+    grid-column: span 2;
 }
 
-.bento-item:last-child{
-    grid-column:span 2;
+.box:last-child {
+    grid-column: span 2;
 }
 
-/* ===== CATÉGORIES ===== */
-
-.service-card{
-    background:#fff;
-    padding:30px;
-    text-align:center;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:all .3s ease;
+/* CATEGORIES */
+.service-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
 }
 
-.service-card:hover{
-    transform:translateY(-10px) scale(1.05);
-    box-shadow:0 15px 30px rgba(0,0,0,.2);
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* ===== TÉMOIGNAGES ===== */
-
-.carousel-item{
-    padding:50px;
-    text-align:center;
+/* TEMOIGNAGES */
+.carousel-item {
+    padding: 50px;
+    text-align: center;
 }
 
-.carousel-item img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    margin:auto;
-    margin-bottom:20px;
+.carousel-item p {
+    font-style: italic;
+}
+/*comite 6*/
+.dark-mode {
+    background-color: #222;
+    color: white;
 }
 
-.carousel-item p{
-    font-style:italic;
+.dark-mode .navbar {
+    background-color: black !important;
 }
-
-/* ===== Responsive ===== */
-
-@media(max-width:768px){
-
-.bento-grid{
-grid-template-columns:1fr;
+.navbar.scrolled {
+    background-color: #000 !important;
+    box-shadow: 0 2px 10px gray;
+    padding: 10px;
 }
-
-.hero h1{
-font-size:2rem;
-}
-
-.hero{
-text-align:center;
-}
-
+#topBtn {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px;
 }
