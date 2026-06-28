@@ -199,6 +199,24 @@
     </footer>
     <button id="topBtn">↑</button>
 
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const profiles = document.querySelectorAll('.profile');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+
+                profiles.forEach(profile => {
+                    if (filter === 'all' || profile.classList.contains(filter)) {
+                        profile.style.display = "block";
+                    } else {
+                        profile.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
 
