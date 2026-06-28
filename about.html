@@ -223,6 +223,24 @@
     </footer>
     <button id="topBtn">↑</button>
 
+    <script>
+        function compteur(id, fin) {
+            let n = 0;
+            let interval = setInterval(() => {
+                n++;
+                document.getElementById(id).innerText = n;
+
+                if (n >= fin) {
+                    clearInterval(interval);
+                }
+            }, 20);
+        }
+
+        compteur("c1", 500);
+        compteur("c2", 120);
+        compteur("c3", 1000);
+        compteur("c4", 25);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
