@@ -3,14 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catalogue de Freelances</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">AfriTalent</a>
 
@@ -26,37 +32,35 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
                 </ul>
-                <button id="theme-btn" class="btn btn-light ms-3">
-                    🌙
-                </button>
             </div>
         </div>
     </nav>
-    <div>
 
-        <h1>Catalogue de Freelances</h1>
+    <div class="container py-5">
+
+        <h1 class="text-center mb-4">Catalogue de Freelances</h1>
 
         <!-- Barre de filtres -->
-        <div>
-            <button>Tous</button>
-            <button>Développeurs</button>
-            <button>Designers</button>
-            <button>Marketing</button>
+        <div class="text-center mb-5">
+            <button class="btn btn-primary m-1 filter-btn" data-filter="all">Tous</button>
+            <button class="btn btn-outline-primary m-1 filter-btn" data-filter="dev">Développeurs</button>
+            <button class="btn btn-outline-primary m-1 filter-btn" data-filter="design">Designers</button>
+            <button class="btn btn-outline-primary m-1 filter-btn" data-filter="marketing">Marketing</button>
         </div>
 
         <!-- Grille des profils -->
-        <div>
+        <div class="row g-4">
 
             <!-- Profil 1 -->
-            <div >
-                <div >
-                    <img src="./images/thiam.jfif">
-                    <div>
-                        <h5>THIAM</h5>
-                        <p>Développeur Web</p>
+            <div class="col-lg-4 col-md-6 col-12 profile dev">
+                <div class="card h-100 shadow">
+                    <img src="./images/thiam.jfif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">THIAM</h5>
+                        <p class="text-primary">Développeur Web</p>
                         <p>Spécialiste HTML, CSS, JavaScript et Bootstrap.</p>
                         <p><strong>20 mru/h</strong></p>
-                        <p>
+                        <p class="text-warning">
                             ★★★★☆
                         </p>
                         <a href="#" class="btn btn-primary">Voir le profil</a>
@@ -65,121 +69,121 @@
             </div>
 
             <!-- Profil 2 -->
-            <div>
-                <div>
-                    <img src="./images/marie.jfif">
-                    <div >
-                        <h5>Marie DIADKHITE</h5>
-                        <p>Designer UI/UX</p>
+            <div class="col-lg-4 col-md-6 col-12 profile design">
+                <div class="card h-100 shadow">
+                    <img src="./images/marie.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Marie DIADKHITE</h5>
+                        <p class="text-primary">Designer UI/UX</p>
                         <p>Création d'interfaces modernes et intuitives.</p>
                         <p><strong>25 mru/h</strong></p>
-                        <p>★★★★★</p>
-                        <a href="#">Voir le profil</a>
+                        <p class="text-warning">★★★★★</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
 
             <!-- Profil 3 -->
-            <div>
-                <div>
-                    <img src="./images/yafa.jfif">
-                    <div>
-                        <h5>YAFA</h5>
-                        <p>Community Manager</p>
+            <div class="col-lg-4 col-md-6 col-12 profile marketing">
+                <div class="card h-100 shadow">
+                    <img src="./images/yafa.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">YAFA</h5>
+                        <p class="text-primary">Community Manager</p>
                         <p>Gestion des réseaux sociaux et publicité.</p>
                         <p><strong>18 mru/h</strong></p>
-                        <p>★★★★☆</p>
-                        <a href="#">Voir le profil</a>
+                        <p class="text-warning">★★★★☆</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
 
             <!-- Profil 4 -->
-            <div>
-                <div>
-                    <img src="./images/camara.jfif">
-                    <div>
-                        <h5>CAMARA</h5>
-                        <p>Développeuse Front-End</p>
+            <div class="col-lg-4 col-md-6 col-12 profile dev">
+                <div class="card h-100 shadow">
+                    <img src="./images/camara.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">CAMARA</h5>
+                        <p class="text-primary">Développeuse Front-End</p>
                         <p>Experte en React et Bootstrap.</p>
                         <p><strong>22 mru/h</strong></p>
-                        <p>★★★★★</p>
-                        <a href="#">Voir le profil</a>
+                        <p class="text-warning">★★★★★</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
 
             <!-- Profil 5 -->
-            <div>
-                <div>
-                    <img src="./images/moktar.jfif">
-                    <div>
-                        <h5>MOKHTAR AHMED</h5>
-                        <p>Graphiste</p>
+            <div class="col-lg-4 col-md-6 col-12 profile design">
+                <div class="card h-100 shadow">
+                    <img src="./images/moktar.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">MOKHTAR AHMED</h5>
+                        <p class="text-primary">Graphiste</p>
                         <p>Création de logos et identités visuelles.</p>
                         <p><strong>19 mru/h</strong></p>
-                        <p>★★★★☆</p>
+                        <p class="text-warning">★★★★☆</p>
                         <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
 
             <!-- Profil 6 -->
-            <div>
-                <div>
-                    <img src="./images/ayoub.jfif">
-                    <div>
-                        <h5>AYOUB</h5>
-                        <p>Spécialiste SEO</p>
+            <div class="col-lg-4 col-md-6 col-12 profile marketing">
+                <div class="card h-100 shadow">
+                    <img src="./images/ayoub.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">AYOUB</h5>
+                        <p class="text-primary">Spécialiste SEO</p>
                         <p>Optimisation de la visibilité sur Google.</p>
                         <p><strong>21 mru/h</strong></p>
-                        <p>★★★★★</p>
-                        <a href="#" >Voir le profil</a>
+                        <p class="text-warning">★★★★★</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
 
             <!-- Profil 7 -->
-            <div >
-                <div>
-                    <img src="./images/kouame.png">
-                    <div>
-                        <h5> Kouamé</h5>
-                        <p>Développeur PHP</p>
+            <div class="col-lg-4 col-md-6 col-12 profile dev">
+                <div class="card h-100 shadow">
+                    <img src="./images/kouame.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"> Kouamé</h5>
+                        <p class="text-primary">Développeur PHP</p>
                         <p>Création d'applications web dynamiques.</p>
                         <p><strong>23 mru/h</strong></p>
-                        <p>★★★★☆</p>
-                        <a href="#">Voir le profil</a>
+                        <p class="text-warning">★★★★☆</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
 
             <!-- Profil 8 -->
-            <div>
-                <div>
-                    <img src="./images/oumy.jfif">
-                    <div >
-                        <h5>oumy ly</h5>
-                        <p>Web Designer</p>
+            <div class="col-lg-4 col-md-6 col-12 profile design">
+                <div class="card h-100 shadow">
+                    <img src="./images/oumy.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">oumy ly</h5>
+                        <p class="text-primary">Web Designer</p>
                         <p>Design responsive et expérience utilisateur.</p>
                         <p><strong>20 mru/h</strong></p>
-                        <p>★★★★★</p>
-                        <a href="#">Voir le profil</a>
+                        <p class="text-warning">★★★★★</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
 
             <!-- Profil 9 -->
-            <div>
-                <div>
-                    <img src="./images/ndiaye.jfif">
-                    <div>
-                        <h5>N'diay</h5>
-                        <p>Consultant Digital</p>
+            <div class="col-lg-4 col-md-6 col-12 profile marketing">
+                <div class="card h-100 shadow">
+                    <img src="./images/ndiaye.jfif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">N'diay</h5>
+                        <p class="text-primary">Consultant Digital</p>
                         <p>Stratégie de communication numérique.</p>
                         <p><strong>24 mru/h</strong></p>
-                        <p>★★★★☆</p>
-                        <a>Voir le profil</a>
+                        <p class="text-warning">★★★★☆</p>
+                        <a href="#" class="btn btn-primary">Voir le profil</a>
                     </div>
                 </div>
             </div>
@@ -187,9 +191,10 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="bg-light text-center py-3">
         <p>&copy; 2026 AfriTalent. Tous droits réservés.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
