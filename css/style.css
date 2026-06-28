@@ -1,0 +1,108 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Variables CSS */
+:root{
+    --primary:#0d6efd;
+    --secondary:#6c757d;
+    --success:#198754;
+    --warning:#ffc107;
+    --light:#f8f9fa;
+    --dark:#212529;
+
+    --title-font:'Poppins',sans-serif;
+    --text-font:'Roboto',sans-serif;
+
+    --space-sm:10px;
+    --space-md:20px;
+    --space-lg:40px;
+}
+
+/* Reset CSS */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Style général */
+body{
+    font-family:var(--text-font);
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.6;
+}
+
+/* Titres */
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--title-font);
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+/* Paragraphes */
+p{
+    margin-bottom:15px;
+}
+
+/* Liens */
+a{
+    text-decoration:none;
+    color:var(--primary);
+}
+
+a:hover{
+    color:var(--warning);
+}
+
+/* Images */
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* Container */
+.container{
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+/* Navbar */
+.navbar{
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    padding:15px 0;
+}
+
+.navbar-brand{
+    font-family:var(--title-font);
+    font-size:28px;
+    font-weight:bold;
+    color:var(--primary);
+}
+
+.navbar-nav{
+    margin-left:auto;
+}
+
+.navbar-nav .nav-link{
+    color:var(--dark);
+    margin-left:20px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.navbar-nav .nav-link:hover{
+    color:var(--primary);
+}
+
+/* Boutons */
+.btn-primary{
+    background:var(--primary);
+    border:none;
+    padding:10px 20px;
+}
+
+.btn-primary:hover{
+    background:var(--success);
+}
